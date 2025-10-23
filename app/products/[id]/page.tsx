@@ -1,6 +1,8 @@
+import { cookies } from 'next/headers';
 import styles from './page.module.scss'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import OrderButton from '@/app/components/orderbutton';
 
 type Product = {
   ID: number
@@ -55,7 +57,7 @@ export default async function ProductPage({ params }: { params: { id?: string;} 
             </div>
 
             <div className={styles.actions}>
-              {/* <Link href={`/products/${product.ID}/edit`} className={styles.btnSecondary}>Edit</Link> */}
+  <OrderButton productId={product.ID} />
             </div>
           </article>
         </div>

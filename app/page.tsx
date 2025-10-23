@@ -1,3 +1,4 @@
+import { cookies } from 'next/headers'
 import styles from './page.module.scss'
 import Link from 'next/link'
 
@@ -14,6 +15,9 @@ const formatPrice = (p: number) =>
   new Intl.NumberFormat(undefined, { style: 'currency', currency: 'USD', maximumFractionDigits: 2 }).format(p)
 
 export default async function Home() {
+  const cookie = (await cookies()).get('Authorization')?.value;
+  console.log("Cookie:", cookie);
+  
   try {
     const res = await fetch("http://localhost:3000/products", { cache: 'no-store', headers: { Accept: 'application/json' } })
     if (!res.ok) {
