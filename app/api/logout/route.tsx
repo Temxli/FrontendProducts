@@ -15,7 +15,7 @@ export async function POST() {
       return NextResponse.json({ error: 'Logout failed' }, { status: res.status });
     }
 
-    const response = NextResponse.redirect('http://10.1.101.59:3001/');
+    const response = NextResponse.redirect(new URL('/', process.env.NEXT_PUBLIC_BASE_URL || 'http://10.1.101.59:3001'));
 
     response.cookies.set({
       name: 'Authorization',
