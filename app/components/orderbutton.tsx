@@ -13,7 +13,7 @@ export default function OrderButton({ productId }: { productId: number }) {
     setMessage('');
 
     try {
-      const res = await fetch('http://localhost:3000/orders', {
+      const res = await fetch('http://10.1.101.59:3000/orders', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include', // sends cookies

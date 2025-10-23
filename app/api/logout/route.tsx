@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 export async function POST() {
   try {
     // 1️⃣ Call your Go backend logout endpoint
-    const res = await fetch('http://localhost:3000/users/logout', {
+    const res = await fetch('http://10.1.101.59:3000/users/logout', {
       method: 'POST',
       credentials: 'include',
     });

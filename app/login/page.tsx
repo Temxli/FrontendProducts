@@ -40,10 +40,9 @@ export default function Login() {
       }
 
       const data = await response.json();
-      console.log("✅ Server response:", data);
+      console.log("Server response:", data);
 
-      alert(`Welcome, ${username}!`);
-      router.push("/"); // переход на главную после успешного логина
+      router.push("/");
     } catch (error: any) {
       alert(error.message || "Login failed");
       console.error("❌ Login error:", error);

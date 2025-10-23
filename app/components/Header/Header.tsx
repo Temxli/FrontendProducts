@@ -2,14 +2,17 @@
 
 import styles from "./Header.module.css";
 import Button from "../Button/Button";
+import Link from "next/link";
 
 export default function Header() {
   return (
     <header className={`${styles.header}`}>
-      <h1 className={styles.title}>Product Receive</h1>
+      <Link href={'/'}>
+        <h1 className={styles.title}>Product Receive</h1>
+      </Link>
       <nav className={styles.navbar}>
-        <Button title="Login" link="/login" />
-        <Button title="Registration" link="/registration" />
+        <Button title="Orders" link="/order" />
+        <Button title="Log Out" link="/login" />
       </nav>
     </header>
   );

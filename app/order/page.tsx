@@ -32,7 +32,7 @@ export default async function OrdersPage() {
   console.log('Cookie:', cookie)
 
   try {
-    const res = await fetch('http://localhost:3000/orders', {
+    const res = await fetch('http://10.1.101.59:3000/orders', {
       cache: 'no-store',
       headers: { Accept: 'application/json' },
     })
@@ -46,7 +46,7 @@ export default async function OrdersPage() {
           <p className={styles.error}>Error loading orders: HTTP {res.status}</p>
           <pre className={styles.pre}>{body}</pre>
         </main>
-        
+
       )
     }
 
