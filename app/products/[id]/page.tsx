@@ -15,7 +15,7 @@ const formatPrice = (p: number) =>
   new Intl.NumberFormat(undefined, { style: 'currency', currency: 'USD', maximumFractionDigits: 2 }).format(p)
 
 export default async function ProductPage({ params }: { params: { id?: string;} }) {
-  const id = params.id
+  const id = (await params).id
   if (!id) return notFound()
 
   try {
@@ -55,7 +55,7 @@ export default async function ProductPage({ params }: { params: { id?: string;} 
             </div>
 
             <div className={styles.actions}>
-              <Link href={`/products/${product.ID}/edit`} className={styles.btnSecondary}>Edit</Link>
+              {/* <Link href={`/products/${product.ID}/edit`} className={styles.btnSecondary}>Edit</Link> */}
             </div>
           </article>
         </div>

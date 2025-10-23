@@ -54,7 +54,7 @@ return (
                   <div className={styles.actions}>
                     {/* View -> переход на страницу продукта */}
                     <Link href={`/products/${p.ID}`} className={styles.btnPrimary}>View</Link>
-                    <button className={styles.btnSecondary}>Edit</button>
+                    {/* <button className={styles.btnSecondary}>Edit</button> */}
                   </div>
                 </article>
               ))}
