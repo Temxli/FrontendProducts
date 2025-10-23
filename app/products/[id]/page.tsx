@@ -1,3 +1,4 @@
+import { cookies } from 'next/headers';
 import styles from './page.module.scss'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
