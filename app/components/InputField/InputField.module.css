@@ -4,4 +4,9 @@
   width: 100%;
   height: auto;
   background-color: #eff3f6;
+  color: #000000;
+}
+
+.input::placeholder {
+  color: #a0a0a0;
 }

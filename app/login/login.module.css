@@ -1,0 +1,29 @@
+.login {
+    background: #601FEC;
+    background: linear-gradient(180deg, rgba(96, 31, 236, 1) 0%, rgba(181, 181, 181, 1) 100%);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login_inner {
+    background-color: #1f1f1f2f;
+    padding: 40px;
+    border-radius: 10px;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register_link {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.register_link:hover {
+    color: #aa85fa;
+    text-decoration: underline;
+}
