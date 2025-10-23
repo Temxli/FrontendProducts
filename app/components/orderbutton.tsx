@@ -16,7 +16,7 @@ export default function OrderButton({ productId }: { productId: number }) {
       const res = await fetch('http://10.1.101.59:3000/orders', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        credentials: 'include', // sends cookies
+        credentials: 'include', 
         body: JSON.stringify({
           items: [{ product_id: productId }],
         }),

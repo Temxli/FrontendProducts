@@ -1,7 +1,6 @@
 import { NextResponse } from 'next/server';
 
 export async function GET() {
-  // чтобы работало и при прямом переходе по /api/logout
   return POST();
 }
 
@@ -17,7 +16,7 @@ export async function POST() {
     }
 
     const response = NextResponse.redirect('http://10.1.101.59:3001/');
-    
+
     response.cookies.set({
       name: 'Authorization',
       value: '',

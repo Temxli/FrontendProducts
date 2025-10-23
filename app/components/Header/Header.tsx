@@ -15,7 +15,7 @@ export default async function Header() {
       </Link>
       {cookie ? (      <nav className={styles.navbar}>
         <Button title="Orders" link="/order" />
-        <Button title="Log Out" link="/api/logout" />
+        <Button title="Log Out" link="/api/logout"/>
       </nav>) : (      <nav className={styles.navbar}>
         <Button title="Login" link="/login" />
         <Button title="Sign Up" link="/registration" />
