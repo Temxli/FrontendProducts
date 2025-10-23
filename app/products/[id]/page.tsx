@@ -21,7 +21,7 @@ export default async function ProductPage({ params }: { params: { id?: string;} 
   if (!id) return notFound()
 
   try {
-    const res = await fetch(`http://localhost:3000/products/${id}`, { cache: 'no-store', headers: { Accept: 'application/json' } })
+    const res = await fetch(`http://10.1.101.59:3000/products/${id}`, { cache: 'no-store', headers: { Accept: 'application/json' } })
     if (res.status === 404) return notFound()
     if (!res.ok) {
       const body = await res.text().catch(() => '<no body>')

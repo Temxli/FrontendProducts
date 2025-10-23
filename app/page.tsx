@@ -19,7 +19,7 @@ export default async function Home() {
   console.log("Cookie:", cookie);
   
   try {
-    const res = await fetch("http://localhost:3000/products", { cache: 'no-store', headers: { Accept: 'application/json' } })
+    const res = await fetch("http://10.1.101.59:3000/products", { cache: 'no-store', headers: { Accept: 'application/json' } })
     if (!res.ok) {
       const body = await res.text().catch(() => '<no body>')
       console.error('Fetch failed', res.status, body)
