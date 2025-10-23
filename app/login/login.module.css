@@ -13,9 +13,16 @@
     padding: 40px;
     border-radius: 10px;
     display: flex;
-    gap: 15px;
     flex-direction: column;
+    gap: 15px;
     align-items: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
 }
 
 .register_link {
@@ -26,4 +33,11 @@
 .register_link:hover {
     color: #aa85fa;
     text-decoration: underline;
+}
+
+.title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 20px;
 }

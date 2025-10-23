@@ -7,10 +7,10 @@ type ButtonProps = {
     title: string;
     link?: string;
     onClick?: () => void;
+    type?: "button" | "submit";
 };
 
-export default function Button({ title, link, onClick }: ButtonProps) {
-    // если передан link → используем Link от next.js
+export default function Button({ title, link, onClick, type }: ButtonProps) {
     if (link) {
         return (
             <Link href={link} className={styles.button}>
@@ -19,9 +19,8 @@ export default function Button({ title, link, onClick }: ButtonProps) {
         );
     }
 
-    // если передан onClick → обычная кнопка
     return (
-        <button className={styles.button} onClick={onClick}>
+        <button className={styles.button} type={type} onClick={onClick}>
             {title}
         </button>
     );

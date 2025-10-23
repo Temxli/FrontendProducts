@@ -42,6 +42,7 @@ export default function Registration() {
     return (
         <div className={styles.registration}>
             <div className={styles.registration_inner}>
+                <h1 className={styles.title}>Registration</h1>
                 <InputField placeHolder="Enter the Username" onChange={setUsername} />
                 <InputField placeHolder="Enter the Email" />
                 <InputField placeHolder="Enter the Password" onChange={setPassword} />

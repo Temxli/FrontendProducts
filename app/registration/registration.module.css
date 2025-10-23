@@ -27,3 +27,10 @@
     color: #aa85fa;
     text-decoration: underline;
 }
+
+.title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
