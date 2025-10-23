@@ -33,6 +33,7 @@ export default function Login() {
           name: username,
           password: password,
         }),
+        credentials: "include",
       });
 
       if (!response.ok) {
@@ -43,6 +44,8 @@ export default function Login() {
       console.log("Server response:", data);
 
       router.push("/");
+            router.refresh(); 
+
     } catch (error: any) {
       alert(error.message || "Login failed");
       console.error("❌ Login error:", error);

@@ -32,7 +32,7 @@ export default async function OrdersPage() {
   console.log('Cookie:', cookie)
 
   try {
-    const res = await fetch('http://10.1.101.59:3000/orders', {
+    const res = await fetch('http://localhost:3000/orders', {
       cache: 'no-store',
       headers: { Accept: 'application/json' },
     })
@@ -46,7 +46,7 @@ export default async function OrdersPage() {
           <p className={styles.error}>Error loading orders: HTTP {res.status}</p>
           <pre className={styles.pre}>{body}</pre>
         </main>
-
+        
       )
     }
 
@@ -66,10 +66,11 @@ export default async function OrdersPage() {
                 <article key={o.order_id} className={styles.card}>
                   <div className={styles.cardHeader}>
                     <h2 className={styles.name}>Order #{o.order_id}</h2>
-                    <div>Created: {new Date(o.CreatedAt).toLocaleString()}</div>
                   </div>
 
                   <div className={styles.meta}>
+                                        <div>Created: {new Date(o.CreatedAt).toLocaleString()}</div>
+
                     <strong>Items:</strong>
                     <ul style={{ marginTop: '8px' }}>
                       {o.items.map((item) => (
@@ -81,9 +82,9 @@ export default async function OrdersPage() {
                   </div>
 
                   <div className={styles.actions}>
-                    <Link href={`/orders/${o.order_id}`} className={styles.btnPrimary}>
+                    {/* <Link href={`/orders/${o.order_id}`} className={styles.btnPrimary}>
                       View Details
-                    </Link>
+                    </Link> */}
                   </div>
                 </article>
               ))}

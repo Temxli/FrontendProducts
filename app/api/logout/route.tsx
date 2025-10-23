@@ -13,7 +13,7 @@ export async function POST() {
     }
 
     // 2️⃣ Prepare redirect response
-    const response = NextResponse.redirect(new URL('/', process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3001'));
+    const response = NextResponse.redirect(new URL('/', process.env.NEXT_PUBLIC_BASE_URL || 'http://10.1.101.59:3001'));
 
     // 3️⃣ Clear Authorization cookie
     response.cookies.set({
